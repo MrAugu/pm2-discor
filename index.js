@@ -36,7 +36,14 @@ function sendToDiscord(message) {
 
   // The JSON payload to send to the Webhook
   var payload = {
-    "content" : `\`\`\`${description}\`\`\``
+    "username": "Server Logs",
+    "avatar_url": "https://cdn.discordapp.com/icons/630058179547627592/861077a9fecc3c5a5421f0106e76e0ba.png",
+    "embeds": [
+      {
+        "color": "#446fff",
+        "description": `\`\`\`${description}\`\`\``
+      }
+    ]
   };
 
   // Options for the post request
