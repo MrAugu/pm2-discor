@@ -36,7 +36,7 @@ function sendToDiscord(message) {
 
   // The JSON payload to send to the Webhook
   var payload = {
-    "content" : `\`\`\`${description}\`\`\``;
+    "content" : `\`\`\`${description}\`\`\``
   };
 
   // Options for the post request
