@@ -36,7 +36,7 @@ function sendToDiscord(message) {
 
   // The JSON payload to send to the Webhook
   var payload = {
-    "content" : description
+    "content" : `\`\`\`${description}\`\`\``;
   };
 
   // Options for the post request
@@ -80,7 +80,7 @@ function bufferMessage() {
   }
 
   // join the buffer with newlines
-  nextMessage.description = nextMessage.buffer.join("\n");
+  nextMessage.description = nextMessage.buffer.join("");
 
   // delete the buffer from memory
   delete nextMessage.buffer;
